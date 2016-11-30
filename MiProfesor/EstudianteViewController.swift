@@ -139,12 +139,7 @@ class EstudianteViewController: UIViewController, UITextFieldDelegate, UIImagePi
             
             //set the meal to be passed to MealTableViewController after the unwind segue.
             estudiante = Estudiante(codigo: codigo, nombre: nombre, celular: celular, email: email, semestre: semestre, foto: foto, usr: usr, pass: pass, idP: idPrograma)
-            
         }
-        
-        
     }
-    
-    
 }
 
