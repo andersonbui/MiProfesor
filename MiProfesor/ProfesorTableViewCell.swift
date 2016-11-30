@@ -10,6 +10,11 @@ import UIKit
 
 class ProfesorTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nombreLabel: UILabel!
+    @IBOutlet weak var referenciaLabel: UILabel!
+    @IBOutlet weak var fotoImage: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

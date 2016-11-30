@@ -11,8 +11,10 @@ import UIKit
 class ProgramaViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     //MARK: - properties
+    
     @IBOutlet var nombreTextField: UITextField!
     @IBOutlet weak var descripcionTextField: UITextField!
+    @IBOutlet weak var idUniversidadTextField: UITextField!
     @IBOutlet weak var fotoImage: UIImageView!
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -27,11 +29,12 @@ class ProgramaViewController: UIViewController, UITextFieldDelegate, UIImagePick
         nombreTextField.delegate = self
         
         // Set up views if editing an existing Meal.
-        if let univ = programa {
-            navigationItem.title = univ.nombre
-            nombreTextField.text = univ.nombre
-            fotoImage.image = univ.foto
-            descripcionTextField.text = univ.descripcion
+        if let prog = programa {
+            navigationItem.title = prog.nombre
+            nombreTextField.text = prog.nombre
+            fotoImage.image = prog.foto
+            descripcionTextField.text = prog.descripcion
+            idUniversidadTextField.text = prog.idUniversidad
         }
         
         // Enable the save button only if the text field has a valid Meal name
@@ -117,9 +120,10 @@ class ProgramaViewController: UIViewController, UITextFieldDelegate, UIImagePick
             let nombre = nombreTextField.text ?? ""
             let foto = fotoImage.image
             let descripcion = descripcionTextField.text
+            let idUniversidad = idUniversidadTextField.text ?? ""
             
             //set the meal to be passed to MealTableViewController after the unwind segue.
-            programa = Programa(nombre: nombre, descripcion: descripcion, foto: foto)
+            programa = Programa(nombre: nombre, descripcion: descripcion, idUniversidad: idUniversidad, foto: foto)
             
         }
         

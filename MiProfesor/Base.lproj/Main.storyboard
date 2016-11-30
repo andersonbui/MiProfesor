@@ -307,9 +307,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descripcionLabel" destination="cuh-zb-xaO" id="EcN-DT-a4p"/>
-                                    <outlet property="fotoUIImage" destination="GkD-Hd-Phx" id="S7H-7i-UBl"/>
-                                    <outlet property="nombreLabel" destination="Y2k-nH-7fd" id="tbP-Pb-kUg"/>
+                                    <outlet property="descripcionLabel" destination="cuh-zb-xaO" id="cUl-82-L7c"/>
+                                    <outlet property="fotoImage" destination="GkD-Hd-Phx" id="n1v-3P-ZO0"/>
+                                    <outlet property="nombreLabel" destination="Y2k-nH-7fd" id="DyO-I7-K3T"/>
                                     <segue destination="wf7-rU-gmc" kind="show" identifier="ShowDetail" id="DjB-wa-QpO"/>
                                 </connections>
                             </tableViewCell>
@@ -439,9 +439,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descripcionLabel" destination="hdU-Hr-FvY" id="irs-Wk-mDB"/>
-                                    <outlet property="fotoUIImage" destination="0on-Xg-0iq" id="cYc-5d-VvF"/>
-                                    <outlet property="nombreLabel" destination="36h-E3-K5J" id="bry-mW-73c"/>
+                                    <outlet property="fotoImage" destination="0on-Xg-0iq" id="SWR-gb-gaM"/>
+                                    <outlet property="nombreLabel" destination="36h-E3-K5J" id="41E-rx-8cV"/>
+                                    <outlet property="referenciaLabel" destination="hdU-Hr-FvY" id="9G3-w0-eqB"/>
                                     <segue destination="7Of-N1-Jnb" kind="show" identifier="ShowDetail" id="Fcl-RE-QfB"/>
                                 </connections>
                             </tableViewCell>
@@ -505,9 +505,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descripcionLabel" destination="R6d-HX-ouG" id="Dlw-ik-LVX"/>
-                                    <outlet property="fotoUIImage" destination="Wbv-mC-8G5" id="qmu-65-kCc"/>
-                                    <outlet property="nombreLabel" destination="XvF-ab-t61" id="jLX-Uj-CJL"/>
+                                    <outlet property="descripcionLabel" destination="R6d-HX-ouG" id="xpn-MD-fgV"/>
+                                    <outlet property="fotoImage" destination="Wbv-mC-8G5" id="Znl-vQ-mLw"/>
+                                    <outlet property="nombreLabel" destination="XvF-ab-t61" id="gVs-ej-iAC"/>
                                     <segue destination="et3-X2-5Fn" kind="show" identifier="ShowDetail" id="1A9-OC-jYe"/>
                                 </connections>
                             </tableViewCell>
@@ -746,22 +746,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Kpm-kG-KoA">
-                                <rect key="frame" x="85" y="150" width="150" height="150"/>
+                                <rect key="frame" x="85" y="230" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="yDC-Xo-rwE"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eJd-WS-qyo">
-                                <rect key="frame" x="16" y="72" width="288" height="70"/>
+                                <rect key="frame" x="16" y="72" width="288" height="150"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GjZ-gS-cs3">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GjZ-gS-cs3">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KW4-Ni-zEY">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese referencia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KW4-Ni-zEY">
                                         <rect key="frame" x="0.0" y="40" width="288" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese calificacion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YNh-X9-Ai1">
+                                        <rect key="frame" x="0.0" y="80" width="288" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese id asignatura" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipd-wl-wIi">
+                                        <rect key="frame" x="0.0" y="120" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -788,19 +800,21 @@
                     <navigationItem key="navigationItem" title="Nuevo Profesor" id="Nmm-5A-ByQ">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="5jI-oJ-0lf">
                             <connections>
-                                <segue destination="v9J-kO-ZDr" kind="unwind" unwindAction="unwindToMealListWithSender:" id="0IT-rM-MjK"/>
+                                <segue destination="v9J-kO-ZDr" kind="unwind" unwindAction="unwindToProfesorListWithSender:" id="Rtj-6m-LL2"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Guardar" id="gud-TL-kgX">
                             <connections>
-                                <segue destination="v9J-kO-ZDr" kind="unwind" unwindAction="unwindToMealListWithSender:" id="uOf-Jh-1DB"/>
+                                <segue destination="v9J-kO-ZDr" kind="unwind" unwindAction="unwindToProfesorListWithSender:" id="9Ky-l4-vHe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descripcionTextField" destination="KW4-Ni-zEY" id="pmP-CO-jAB"/>
+                        <outlet property="calificacionTextField" destination="YNh-X9-Ai1" id="379-QD-W0M"/>
                         <outlet property="fotoImage" destination="Kpm-kG-KoA" id="i1l-bS-KA2"/>
-                        <outlet property="nombreTextField" destination="GjZ-gS-cs3" id="mGf-2u-Sga"/>
+                        <outlet property="idAsignaturaTextField" destination="ipd-wl-wIi" id="V0c-Mc-QXj"/>
+                        <outlet property="nombreTextField" destination="GjZ-gS-cs3" id="c5w-ee-Cxx"/>
+                        <outlet property="referenciaTextField" destination="KW4-Ni-zEY" id="4pQ-eR-P1r"/>
                         <outlet property="saveButton" destination="gud-TL-kgX" id="2Vn-N5-yA6"/>
                     </connections>
                 </viewController>
@@ -822,22 +836,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageDefault" translatesAutoresizingMaskIntoConstraints="NO" id="lJK-FB-2SR">
-                                <rect key="frame" x="85" y="150" width="150" height="150"/>
+                                <rect key="frame" x="85" y="190" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="o7R-z5-8GZ"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JQs-Dv-sSn">
-                                <rect key="frame" x="16" y="72" width="288" height="70"/>
+                                <rect key="frame" x="16" y="72" width="288" height="110"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="euN-A9-0Pr">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese  nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="euN-A9-0Pr">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MW1-cW-QiG">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese  descripcion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MW1-cW-QiG">
                                         <rect key="frame" x="0.0" y="40" width="288" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese id universidad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gmc-sm-tRE">
+                                        <rect key="frame" x="0.0" y="80" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -864,20 +884,21 @@
                     <navigationItem key="navigationItem" title="Nuevo Programa" id="64K-hS-6b9">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="frZ-Wp-BD0">
                             <connections>
-                                <segue destination="0tm-X8-WpS" kind="unwind" unwindAction="unwindToMealListWithSender:" id="FcD-GK-MW3"/>
+                                <segue destination="0tm-X8-WpS" kind="unwind" unwindAction="unwindToProgramaListWithSender:" id="h21-jS-hMc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Guardar" id="Rse-8Z-R6d">
                             <connections>
-                                <segue destination="0tm-X8-WpS" kind="unwind" unwindAction="unwindToMealListWithSender:" id="r6Z-OE-mgC"/>
+                                <segue destination="0tm-X8-WpS" kind="unwind" unwindAction="unwindToProgramaListWithSender:" id="pFb-Wf-S2f"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descripcionTextField" destination="MW1-cW-QiG" id="W8Y-Iu-PYJ"/>
-                        <outlet property="fotoImage" destination="lJK-FB-2SR" id="EKk-lt-vlI"/>
-                        <outlet property="nombreTextField" destination="euN-A9-0Pr" id="jci-4H-bk5"/>
-                        <outlet property="saveButton" destination="Rse-8Z-R6d" id="hPy-9J-TZ7"/>
+                        <outlet property="descripcionTextField" destination="MW1-cW-QiG" id="3Hz-ME-jbk"/>
+                        <outlet property="fotoImage" destination="lJK-FB-2SR" id="5ba-XE-1TC"/>
+                        <outlet property="idUniversidadTextField" destination="Gmc-sm-tRE" id="hBu-x7-DGr"/>
+                        <outlet property="nombreTextField" destination="euN-A9-0Pr" id="BvF-1y-iqM"/>
+                        <outlet property="saveButton" destination="Rse-8Z-R6d" id="8nD-fI-STM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jaF-QQ-1rp" sceneMemberID="firstResponder"/>
@@ -898,22 +919,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageDefault" translatesAutoresizingMaskIntoConstraints="NO" id="0MY-Qa-5No">
-                                <rect key="frame" x="85" y="150" width="150" height="150"/>
+                                <rect key="frame" x="85" y="190" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="UV4-Sd-vUO"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wTD-1F-c55">
-                                <rect key="frame" x="16" y="72" width="288" height="70"/>
+                                <rect key="frame" x="16" y="72" width="288" height="110"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dkl-Vj-sB8">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dkl-Vj-sB8">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OfR-TK-zzd">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese descripcion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OfR-TK-zzd">
                                         <rect key="frame" x="0.0" y="40" width="288" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese semestre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rJG-xn-qZP">
+                                        <rect key="frame" x="0.0" y="80" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -938,17 +965,27 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nueva asignatura" id="a9b-0U-Nd0">
-                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="9Tl-kF-Udb"/>
-                        <barButtonItem key="rightBarButtonItem" title="Guardar" id="3mE-Ss-SjU"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="9Tl-kF-Udb">
+                            <connections>
+                                <segue destination="g3T-jD-hN4" kind="unwind" unwindAction="unwindToAsignaturaListWithSender:" id="pko-X2-piU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Guardar" id="3mE-Ss-SjU">
+                            <connections>
+                                <segue destination="g3T-jD-hN4" kind="unwind" unwindAction="unwindToAsignaturaListWithSender:" id="UY8-0p-i0e"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descripcionTextField" destination="OfR-TK-zzd" id="Ad9-iT-7EC"/>
-                        <outlet property="fotoImage" destination="0MY-Qa-5No" id="3tl-29-Bvs"/>
-                        <outlet property="nombreTextField" destination="Dkl-Vj-sB8" id="BwT-Oy-iJf"/>
+                        <outlet property="descripcionTextField" destination="OfR-TK-zzd" id="4nh-2F-Wgf"/>
+                        <outlet property="fotoImage" destination="0MY-Qa-5No" id="zYR-Ie-dF4"/>
+                        <outlet property="nombreTextField" destination="Dkl-Vj-sB8" id="rhI-HR-8RC"/>
                         <outlet property="saveButton" destination="3mE-Ss-SjU" id="373-an-JnN"/>
+                        <outlet property="semestreTextField" destination="rJG-xn-qZP" id="4ey-mg-U1x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLR-op-jeN" sceneMemberID="firstResponder"/>
+                <exit id="g3T-jD-hN4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2333" y="3323"/>
         </scene>

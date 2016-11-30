@@ -34,11 +34,11 @@ class AsignaturaTableViewController: UITableViewController {
         
         if asignaturas.isEmpty {
             let foto1 = UIImage(named: "ImageDefault")
-            let univ1 = Asignatura(nombre: "unicauca", descripcion: "asignatura del cauca", foto: foto1)!
+            let univ1 = Asignatura(nombre: "Desarrollo de app moviles", descripcion: "desarrollo de app moviles", semestre: 6, foto: foto1)!
             asignaturas.append(univ1)
             
             let foto2 = UIImage(named: "ImageDefault")
-            let univ2 = Asignatura(nombre: "univalle", descripcion: "asignatura del valle", foto: foto2)!
+            let univ2 = Asignatura(nombre: "base de datos", descripcion: "base de datos", semestre: 4, foto: foto2)!
             asignaturas.append(univ2)
             
         }
@@ -71,7 +71,7 @@ class AsignaturaTableViewController: UITableViewController {
         let asignatura:Asignatura = asignaturas[indexPath.row]
         
         cell.nombreLabel.text = asignatura.nombre
-        cell.fotoUIImage.image = asignatura.foto
+        cell.fotoImage.image = asignatura.foto
         
         cell.descripcionLabel.text = asignatura.descripcion
         
@@ -172,7 +172,7 @@ class AsignaturaTableViewController: UITableViewController {
     }
     
     func loadAsignaturas() {
-        GestorAsignaturas().obtenrasignaturas(callback: imprimirUni)
+        //GestorAsignaturas().obtenrasignaturas(callback: imprimirUni)
     }
     
     func imprimirUni(asignaturas:[Asignatura]){

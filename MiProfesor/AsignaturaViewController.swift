@@ -14,6 +14,7 @@ class AsignaturaViewController: UIViewController, UITextFieldDelegate, UIImagePi
     @IBOutlet var nombreTextField: UITextField!
     @IBOutlet weak var descripcionTextField: UITextField!
     @IBOutlet weak var fotoImage: UIImageView!
+    @IBOutlet weak var semestreTextField: UITextField!
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
@@ -32,6 +33,7 @@ class AsignaturaViewController: UIViewController, UITextFieldDelegate, UIImagePi
             nombreTextField.text = univ.nombre
             fotoImage.image = univ.foto
             descripcionTextField.text = univ.descripcion
+            semestreTextField.text = String(univ.semestre)
         }
         
         // Enable the save button only if the text field has a valid Meal name
@@ -117,9 +119,10 @@ class AsignaturaViewController: UIViewController, UITextFieldDelegate, UIImagePi
             let nombre = nombreTextField.text ?? ""
             let foto = fotoImage.image
             let descripcion = descripcionTextField.text
+            let semestre = Int(semestreTextField.text ?? "0")
             
             //set the meal to be passed to MealTableViewController after the unwind segue.
-            asignatura = Asignatura(nombre: nombre, descripcion: descripcion, foto: foto)
+            asignatura = Asignatura( nombre: nombre, descripcion: descripcion, semestre: semestre!, foto: foto)
             
         }
         

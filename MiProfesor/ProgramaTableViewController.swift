@@ -34,11 +34,11 @@ class ProgramaTableViewController: UITableViewController {
         
         if programas.isEmpty {
             let foto1 = UIImage(named: "ImageDefault")
-            let univ1 = Programa(nombre: "unicauca", descripcion: "programa del cauca", foto: foto1)!
+            let univ1 = Programa(nombre: "Ing sistemas", descripcion: "un ing muy chevere", idUniversidad: "1", foto: foto1)!
             programas.append(univ1)
             
             let foto2 = UIImage(named: "ImageDefault")
-            let univ2 = Programa(nombre: "univalle", descripcion: "programa del valle", foto: foto2)!
+            let univ2 = Programa(nombre: "ing electronica", descripcion: "a lo grande", idUniversidad: "2", foto: foto2)!
             programas.append(univ2)
             
         }
@@ -71,8 +71,7 @@ class ProgramaTableViewController: UITableViewController {
         let programa:Programa = programas[indexPath.row]
         
         cell.nombreLabel.text = programa.nombre
-        cell.fotoUIImage.image = programa.foto
-        
+        cell.fotoImage.image = programa.foto
         cell.descripcionLabel.text = programa.descripcion
         
         return cell
@@ -172,7 +171,7 @@ class ProgramaTableViewController: UITableViewController {
     }
     
     func loadProgramas() {
-        GestorProgramas().obtenrprogramas(callback: imprimirUni)
+        //GestorProgramas().obtenrprogramas(callback: imprimirUni)
     }
     
     func imprimirUni(programas:[Programa]){

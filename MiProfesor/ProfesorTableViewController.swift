@@ -34,11 +34,11 @@ class ProfesorTableViewController: UITableViewController {
         
         if profesores.isEmpty {
             let foto1 = UIImage(named: "ImageDefault")
-            let univ1 = Profesor(nombre: "unicauca", descripcion: "profesor del cauca", foto: foto1)!
+            let univ1 = Profesor(nombre: "Pedro Valdez", referencia: "ninguna", calificacion: 5, idAsignatura: "1", foto: foto1)!
             profesores.append(univ1)
             
             let foto2 = UIImage(named: "ImageDefault")
-            let univ2 = Profesor(nombre: "univalle", descripcion: "profesor del valle", foto: foto2)!
+            let univ2 = Profesor(nombre: "Juan Luis Guerra", referencia: "A lo macho pecho puludo", calificacion: 2, idAsignatura: "2", foto: foto2)!
             profesores.append(univ2)
             
         }
@@ -71,9 +71,8 @@ class ProfesorTableViewController: UITableViewController {
         let profesor:Profesor = profesores[indexPath.row]
         
         cell.nombreLabel.text = profesor.nombre
-        cell.fotoUIImage.image = profesor.foto
-        
-        cell.descripcionLabel.text = profesor.descripcion
+        cell.fotoImage.image = profesor.foto
+        cell.referenciaLabel.text = profesor.referencia
         
         return cell
     }
@@ -172,7 +171,7 @@ class ProfesorTableViewController: UITableViewController {
     }
     
     func loadProfesores() {
-        GestorProfesores().obtenrprofesores(callback: imprimirUni)
+        //GestorProfesores().obtenrprofesores(callback: imprimirUni)
     }
     
     func imprimirUni(profesores:[Profesor]){

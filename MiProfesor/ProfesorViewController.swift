@@ -12,7 +12,9 @@ class ProfesorViewController: UIViewController, UITextFieldDelegate, UIImagePick
     
     //MARK: - properties
     @IBOutlet var nombreTextField: UITextField!
-    @IBOutlet weak var descripcionTextField: UITextField!
+    @IBOutlet var referenciaTextField: UITextField!
+    @IBOutlet var calificacionTextField: UITextField!
+    @IBOutlet var idAsignaturaTextField: UITextField!
     @IBOutlet weak var fotoImage: UIImageView!
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -27,11 +29,14 @@ class ProfesorViewController: UIViewController, UITextFieldDelegate, UIImagePick
         nombreTextField.delegate = self
         
         // Set up views if editing an existing Meal.
-        if let univ = profesor {
-            navigationItem.title = univ.nombre
-            nombreTextField.text = univ.nombre
-            fotoImage.image = univ.foto
-            descripcionTextField.text = univ.descripcion
+        if let prof = profesor {
+            navigationItem.title = prof.nombre
+            nombreTextField.text = prof.nombre
+            fotoImage.image = prof.foto
+            calificacionTextField.text = String(describing: prof.calificacion)
+            referenciaTextField.text = prof.referencia
+            idAsignaturaTextField.text  = prof.idAsignatura
+
         }
         
         // Enable the save button only if the text field has a valid Meal name
@@ -116,10 +121,12 @@ class ProfesorViewController: UIViewController, UITextFieldDelegate, UIImagePick
         if saveButton === unSender {
             let nombre = nombreTextField.text ?? ""
             let foto = fotoImage.image
-            let descripcion = descripcionTextField.text
+            let calificacion = Int(calificacionTextField.text ?? "0")
+            let referencia = referenciaTextField.text
+            let idAsignatura = idAsignaturaTextField.text  ?? ""
             
             //set the meal to be passed to MealTableViewController after the unwind segue.
-            profesor = Profesor(nombre: nombre, descripcion: descripcion, foto: foto)
+            profesor = Profesor(nombre: nombre, referencia: referencia, calificacion: calificacion, idAsignatura: idAsignatura, foto: foto)
             
         }
         

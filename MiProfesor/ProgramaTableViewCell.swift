@@ -10,6 +10,11 @@ import UIKit
 
 class ProgramaTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nombreLabel: UILabel!
+    @IBOutlet weak var descripcionLabel: UILabel!
+    @IBOutlet weak var fotoImage: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
